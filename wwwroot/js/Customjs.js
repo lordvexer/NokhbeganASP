@@ -194,3 +194,16 @@ function GenderSelect(){
   document.getElementById("SoldierTableRow").classList.remove("DisplayHide")
   }
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Finish code Peygiri
+
+function FinishNotif(){
+  if(FinishState===true){
+    document.getElementById("FinishNotif").value = ("کد پیگیری"+" "+ CodePeygiriMsg)
+  }
+else{
+  document.getElementById("FinishNotif").value = ("ثبت نام موفقیت آمیز نبود!!")
+
+}
+}

@@ -1,0 +1,263 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+ <script>
+        window.onload = function () {
+            OpenBootstrapPopup();
+        };
+        function OpenBootstrapPopup() {
+            $("#Expired").modal('show');
+        }
+    </script>
+    
+    <!-- LoadingModal -->
+    <div class="modal fade" id="liveAlert0" tabindex="-1" aria-labelledby="liveAlert0" role="dialog" aria-hidden="true"
+    data-bs-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content p-5">
+                <div class="typewriter">
+                    <div class="slide"><i></i></div>
+                    <div class="paper"></div>
+                    <div class="keyboard"></div>
+                </div>
+                <p class="center mt-3" style="text-align: center;">در حال بررسی...</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Done Alert -->
+    <div class="modal fade" id="liveAlert" tabindex="-1" aria-labelledby="liveAlert" role="dialog" aria-hidden="true"
+        data-bs-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <img src="resource/IMG/Done.svg" class="CENTER AlertIMG">
+                <p class="form-title">ثبت نام شما به موفقیت انجام شد</p>
+                <p class="form-title" style=" color: blueviolet;">کد پیگیری</p>
+                <p class="form-title">0000000</p>
+                <a class="BackToWebsite" href="tvedc.ir" target="_self">بازگشت</a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Expired -->
+    <div class="modal fade" id="Expired" tabindex="-1" aria-labelledby="Expired" role="dialog" aria-hidden="true"
+        data-bs-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form">
+                    <svg class=" Expired " xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24"
+                        width="256" height="170">
+                        <path
+                            d="M13,4.059V4h1a1,1,0,0,0,0-2H10a1,1,0,0,0,0,2h1v.059a9,9,0,1,0,2,0ZM12,20a7,7,0,1,1,7-7A7.009,7.009,0,0,1,12,20Z"
+                            fill="#f30052" class="color000 svgShape"></path>
+                        <path d="M15,12H13V10a1,1,0,0,0-2,0v3a1,1,0,0,0,1,1h3a1,1,0,0,0,0-2Z" fill="#f30052"
+                            class="color000 svgShape"></path>
+                    </svg>
+                    <p class="form-title">مدت زمان ثبت نام به پایان رسیده است</p>
+                    <a class="BackToWebsite" href="tvedc.ir" target="_self">بازگشت</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Login -->
+    <div class="modal fade" id="LoginModal2" tabindex="-1" aria-labelledby="LoginModal2" role="dialog"
+        aria-hidden="true" data-bs-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form">
+                    <img class="OtpImg center" src="resource/IMG/Shield.svg" alt="">
+                    <p class="form-title">وارد شوید</p>
+                    <div class="input-container">
+                        <input class="userpass" type="text" placeholder="نام کاربری">
+                        <span>
+                        </span>
+                    </div>
+                    <div class="input-container">
+                        <input class="userpass" type="password" placeholder="کلمه عبور">
+                    </div>
+                    <button type="submit" class="submit">
+                        ورود
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal OTP -->
+    <div id="LoginModal" class="modal fade " tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static"
+        data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img class="OtpImg center" src="resource/IMG/Shield.svg" alt="">
+
+                    <p class="form-title">شماره تلفن همراه خود را وارد کنید</p>
+                    <div class="row">
+                        <div class="input-container">
+                        <input class="OtpPhone" placeholder=" موبایل خود را وارد کنید" type="number"maxlength="11">
+                            <span>
+                            </span>
+                            <button class="OtpBTN1">OTP</button>
+                        </div>
+                    </div>
+                    <div class="otp-field">
+                        <input type="text" maxlength="1" />
+                        <input type="text" maxlength="1" />
+                        <input type="text" maxlength="1" />
+                        <input type="text" maxlength="1" />
+                    </div>
+                </div>
+                <button class="OtpBTN2">ورود</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Form -->
+    <div class="container-fluid Main">
+        <form class=" needs-validation" autocomplete="off">
+            <div class="card MainCard col-sm-12">
+                <label class="Info">ورود اطلاعات</label>
+                <div class="MainCardInside">
+                    <div class="coolinput">
+                        <label for="input1" class="text">نام</label>
+                        <input type="text" placeholder="نام خود را وارد کنید" name="input1" id="input1" class="input"
+                            onkeypress="return /[آ-ی\s]/i.test(event.key)" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="input2" class="text">نام خانوادگی</label>
+                        <input type="text" placeholder="نام خانوادگی را وارد کنید" name="input" id="input2"
+                            class="input" onkeypress="return /[آ-ی\s]/i.test(event.key)" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="input3" class="text">کد ملی</label>
+                        <input type="text" placeholder="کد ملی را وارد کنید" maxlength="10" name="input" id="input3"
+                            class="input" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="input9" class="text">سریال شناسنامه</label>
+                        <input type="text" placeholder="سریال شناسنامه را وارد کنید" maxlength="10" name="input" id="input9"
+                            class="input" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="persianDatapicker" class="text">تاریخ تولد</label>
+                        <input type="text" class="DatePickerClass" name="persianDatapicker" id="persianDatapicker"
+                            autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="input4" class="text">محل تولد</label>
+                        <input type="text" placeholder="محل تولد را وارد کنید" name="input" id="input4" class="input"
+                            onkeypress="return /[آ-ی\s]/i.test(event.key)" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="input5" class="text">محل صدور شناسنامه</label>
+                        <input type="text" placeholder="محل صدور شناسنامه   " name="input" id="input5" class="input"
+                            onkeypress="return /[آ-ی\s]/i.test(event.key)" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="persianDatapicker2" class="text">تاریخ صدور</label>
+                        <input type="text" class="DatePickerClass" name="persianDatapicker" id="persianDatapicker2"
+                            autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="select1" class="text">وضعیت تاهل</label>
+                        <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                            aria-label=".form-select-lg example" id="select1">
+                            <option value="">انتخاب کنید</option>
+                            <option value="1">مجرد</option>
+                            <option value="2">متاهل</option>
+                        </select>
+                    </div>
+                    <div class="coolinput">
+                        <label for="GenderSellection" class="text">جنسیت</label>
+                        <select class="form-select form-select-lg mb-3" id="GenderSellection" autocomplete="off" onclick="GenderSelect()" required
+                            aria-label=".form-select-lg example" >
+                            <option value="">انتخاب کنید</option>
+                            <option value="1">آقا</option>
+                            <option value="2">خانم</option>
+                        </select>
+                    </div>
+                    <div class="coolinput"id="SoldierSelection">
+                        <label for="select3" class="text">وضعیت نظام وظیفه</label>
+                        <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                            aria-label=".form-select-lg example" id="select3">
+                            <option value="">انتخاب کنید</option>
+                            <option value="1">معاف</option>
+                            <option value="2">پایان خدمت</option>
+                            <option value="3">مشمول</option>
+                            <option value="4">در حال خدمت</option>
+                        </select>
+                    </div>
+                    <div class="coolinput">
+                        <label for="select4" class="text">مقطع تحصیلی</label>
+                        <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                            aria-label=".form-select-lg example" id="select4">
+                            <option value="">انتخاب کنید</option>
+                            <option value="1">کاردانی</option>
+                            <option value="2">کارشناسی</option>
+                            <option value="3">کارشناسی ارشد</option>
+                            <option value="4">دکتری</option>
+                        </select>
+                    </div>
+                    <div class="coolinput">
+                        <label for="input6" class="text">نام دانشگاه</label>
+                        <input type="text" placeholder="نام دانشگاه را وارد کنید" name="input" id="input6" class="input"
+                            onkeypress="return /[آ-ی\s]/i.test(event.key)" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="input7" class="text">معدل</label>
+                        <input type="text" maxlength="5" pattern="^[0-3]\.[0-9]{1,2}$" placeholder="معدل را وارد کنید"
+                            name="input" id="input7" class="input" autocomplete="off" required>
+                    </div>
+                    <div class="coolinput">
+                        <label for="persianDatapicker3" class="text">تاریخ فارغ التحصیلی</label>
+                        <input type="text" class="DatePickerClass" name="persianDatapicker" id="persianDatapicker3"
+                            autocomplete="off" required>
+                    </div>
+                    <div class="coolinput"style="max-width: unset; width: 335px;">
+                        <label for="input8" class="text">آدرس محل سکونت</label>
+                        <input type="text" placeholder="محل سکونت   " name="input" id="input8" class="input"
+                            onkeypress="return /[آ-ی\s]/i.test(event.key)" autocomplete="off" required>
+                    </div>
+                </div>
+                <label class="Info">آپلود مدارک</label>
+                <div class="MainUploadInside">
+                    <div class="UploadSec">
+                        <form id="upload_form" enctype="multipart/form-data" method="post">
+                            <button class="UploadBTN"
+                                onclick="document.getElementById('getFile').click()">شناسنامه</button>
+                            <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                            <input type='file' id="getFile" style="display:none">
+                        </form>
+                    </div>
+                    <div class="UploadSec">
+                        <button acc class="UploadBTN" onclick="document.getElementById('getFile').click()">روی کارت
+                            ملی</button>
+                        <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                    </div>
+                    <div class="UploadSec">
+                        <button class="UploadBTN" onclick="document.getElementById('getFile').click()">پشت کارت
+                            ملی</button>
+                        <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                    </div>
+                    <div class="UploadSec">
+                        <button class="UploadBTN" onclick="document.getElementById('getFile').click()">مدرک
+                            تحصیلی</button>
+                        <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                    </div>
+                    <div class="UploadSec">
+                        <button class="UploadBTN" style="font-size: 11px;"
+                            onclick="document.getElementById('getFile').click()"> احراز محل سکونت</button>
+                        <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                    </div>
+                    <div class="UploadSec" id="SoldierTableRow">
+                        <button class="UploadBTN" style="font-size: 11px;"
+                            onclick="document.getElementById('getFile').click()">کارت پایان خدمت</button>
+                        <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                    </div>
+                </div>
+                <button class="FinishBTN" type="submit" onclick="MellicodeValidation()" data-bs-toggle="modal"
+                    data-bs-target="#liveAlert0">ثبت نام</button>
+            </div>
+        </form>
+            </div>

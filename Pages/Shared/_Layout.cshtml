@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>سامانه ثبت نام نخبگان</title>
+    <link href="lib/bootstrap-5.3.2-dist/css/bootstrap.rtl.min.css" rel="stylesheet" type="text/css" />
+    <link href='lib/fonts/boxicons-2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='lib/DataPicker/css/lib/persian-datepicker.min.css' rel='stylesheet'>
+    <link href='lib/bootstrap-5.3.2-dist/css/dataTables.bootstrap5.min.css' rel='stylesheet'>
+    <link href="lib/Sellect 2/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/Sellect 2/style.css">
+    <link rel="stylesheet" href="lib/Sellect 2/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/fonts/all.min.css">
+    <link href="css/Custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- FavIcons Add -->
+    <meta name="theme-color" content="#2980b9">
+</head>
+<body>
+    <header>
+       <nav class="navbar navbar-dark  ">
+        <div class="container-fluid NavStyle">
+            <img src="resource/IMG/LogoCyrcle.png" alt="Logo" width="70" height="70"
+                class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="#">سامانه نخبگان</a>
+            <a class="navbar-brand" href="www.Tvedc.ir">پورتال شرکت</a>
+            <button class="btn btn-outline-success LoginBTN" type="submit" data-bs-toggle="modal"
+                data-bs-target="#LoginModal2">ورود</button>
+        </div>
+    </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Nokhbegan - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="lib/Jquery/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="lib/Sellect 2/popper.js"></script>
+    <script src="lib/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="lib/DataPicker/js/lib/persian-date.min.js"></script>
+    <script src="lib/DataPicker/js/lib/persian-datepicker.min.js"></script>
+    <script src="lib/DataPicker/js/app.js"></script>
+    <script src="lib/Sellect 2/select2.min.js"></script>
+    <script src="lib/Sellect 2/main.js"></script>
+    <script src="lib/Jquery/jquery.dataTables.min.js"></script>
+    <script src="lib/Jquery/dataTables.bootstrap5.min.js"></script>
+    <script src="js/Customjs.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

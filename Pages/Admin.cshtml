@@ -13,12 +13,25 @@
             <div class="modal-content SmsModal">
                 <section class="ftco-section">
                     <div class="container">
+                        <p style="text-align: right;margin-right: 0.6rem;margin-bottom: 5px;color: #ff4900;">لطفا فقط یکی ار مقادیر زیر را انتخاب کنید</p>
+                        <br />
+                    <p style=" text-align: right;margin-right: 1rem;">انتخاب بر اساس نفرات</p>
                         <div class="row justify-content-center">
                             <div class="col-lg-4 d-flex justify-content-center align-items-center">
                                 <select class="js-select2" multiple="multiple">
-                                    <option value="O1" data-badge="" selected>همه</option>
+                                    <option value="O1" data-badge="">همه</option>
                                     <option value="O2" data-badge="">user1</option>
                                     <option value="O3" data-badge="">user2</option>
+                                </select>
+                            </div>
+                        </div>
+                            <p style="text-align: right;margin-right: 0.6rem;margin-bottom: 5px;">انتخاب بر اساس رشته تحصیلی</p>  
+                            <div class="row justify-content-center">
+                            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                                <select class="js-select2" multiple="multiple">
+                                    <option value="O1" data-badge="">همه</option>
+                                    <option value="O2" data-badge="">مهندسی کامپیوتر</option>
+                                    <option value="O3" data-badge="">مدیریت</option>
                                 </select>
                             </div>
                         </div>
@@ -26,7 +39,7 @@
                 </section>
                 <label class="SmsLabel">متن مورد نظر را وارد کنید:</label>
                 <div class="mb-3">
-                    <textarea class="form-control SmsTextArea" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    <textarea class="form-control SmsTextArea" id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
                 <button type="submit" class="SendSmsBTN">
                     ارسال
@@ -82,7 +95,7 @@
                         <div class="coolinput">
                             <label for="input9" class="text">سریال شناسنامه</label>
                             <input type="text" placeholder="سریال شناسنامه را وارد کنید" maxlength="10" name="input" id="input9"
-                                class="input" autocomplete="off" required>
+       blue                       class="input" autocomplete="off" required>
                         </div>
                         <div class="coolinput">
                             <label for="persianDatapicker" class="text">تاریخ تولد</label>
@@ -134,17 +147,34 @@
                                 <option value="4">در حال خدمت</option>
                             </select>
                         </div>
-                        <div class="coolinput">
-                            <label for="select4" class="text">مقطع تحصیلی</label>
-                            <select class="form-select form-select-lg mb-3" autocomplete="off" required
-                                aria-label=".form-select-lg example" id="select4">
-                                <option value="">انتخاب کنید</option>
-                                <option value="1">کاردانی</option>
-                                <option value="2">کارشناسی</option>
-                                <option value="3">کارشناسی ارشد</option>
-                                <option value="4">دکتری</option>
-                            </select>
-                        </div>
+                        
+                  <div class="coolinput">
+                    <label for="select4" class="text">رشته تحصیلی</label>
+                    <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                        aria-label=".form-select-lg example" id="select4">
+                        <option value="">انتخاب کنید</option>
+                        <option value="1">کامپیوتر</option>
+                        <option value="2">مدیریت</option>
+                    </select>
+                </div>
+                <div class="coolinput">
+                    <label for="select5" class="text">مقطع تحصیلی</label>
+                    <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                        aria-label=".form-select-lg example" id="select5">
+                        <option value="">انتخاب کنید</option>
+                        <option value="2">کارشناسی</option>
+                        <option value="3">کارشناسی ارشد</option>
+                    </select>
+                </div>
+                   <div class="coolinput">
+                    <label for="select6" class="text">گرایش</label>
+                    <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                        aria-label=".form-select-lg example" id="select6">
+                        <option value="">انتخاب کنید</option>
+                        <option value="1">نرم افزار</option>
+                        <option value="2">مدیریت دولتی</option>
+                    </select>
+                </div>
                         <div class="coolinput">
                             <label for="input6" class="text">نام دانشگاه</label>
                             <input type="text" placeholder="نام دانشگاه را وارد کنید" name="input" id="input6"
@@ -186,6 +216,7 @@
                                                     style="color: #0d3a87;"></i></button>
                                             <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
                                                     style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
                                         </td>
 
                                     </tr>
@@ -197,6 +228,7 @@
                                                     style="color: #0d3a87;"></i></button>
                                             <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
                                                     style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
                                           
                                         </td>
                                     </tr>
@@ -208,6 +240,7 @@
                                                     style="color: #0d3a87;"></i></button>
                                             <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
                                                     style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
                                             
                                         </td>
                                     </tr>
@@ -219,6 +252,7 @@
                                                     style="color: #0d3a87;"></i></button>
                                             <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
                                                     style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
                                            
                                         </td>
                                     </tr>
@@ -230,6 +264,7 @@
                                                     style="color: #0d3a87;"></i></button>
                                             <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
                                                     style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
                                            
                                         </td>
                                     </tr>
@@ -241,11 +276,37 @@
                                                     style="color: #0d3a87;"></i></button>
                                             <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
                                                     style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
+                                           
+                                        </td>
+                                    </tr>
+                                     <tr id="SoldierTableRow" class="">
+                                        <td scope="row">عکس پرسنلی</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>
+                                            <button id="ImgViewModalBtn" class="FuncIcon"><i class="fa-solid fa-eye"
+                                                    style="color: #0d3a87;"></i></button>
+                                            <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
+                                                    style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
+                                           
+                                        </td>
+                                    </tr>
+                                     <tr id="SoldierTableRow" class="">
+                                        <td scope="row">گواهی ممتازی</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>
+                                            <button id="ImgViewModalBtn" class="FuncIcon"><i class="fa-solid fa-eye"
+                                                    style="color: #0d3a87;"></i></button>
+                                            <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
+                                                    style="color: #ff8800;"></i></button>
+                                                     <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
                                            
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <button class="UnusedUSerBTN" type="submit">رد صلاحیت</button>
                             <button class="FinishBTN" type="submit">ذخیره</button>
                             <button class="CloseBTN" data-bs-dismiss="modal">بستن</button>
                     </div>
@@ -265,6 +326,8 @@
                 <label class="toggle-label" for="toggle"></label>
             </div>
             <button class="SmsPanelBTN" data-bs-target="#SMS" data-bs-toggle="modal">ارسال پیامک</button>
+            <button class="SmsPanelBTN">اکسل</button>
+            <button class="SmsPanelBTN">دیتای کامل</button>
         </div>
         <div class="card MainCard col-sm-12">
             <div class="table-responsive">
@@ -272,28 +335,31 @@
 
                     <thead>
                         <tr>
-                            <th scope="col" class="col-2">نام</th>
+                            <th scope="col" class="col-1">نام</th>
                             <th scope="col" class="col-2">نام خانوادگی</th>
-                            <th scope="col" class="col-2">کدملی</th>
-                            <th scope="col" class="col-2">مدرک</th>
-                            <th scope="col" class="col-2">کدپیگیری</th>
+                            <th scope="col" class="col-1">کدملی</th>
+                            <th scope="col" class="col-1">مقطع</th>
+                            <th scope="col" class="col-1">رشته</th>
+                            <th scope="col" class="col-2">گرایش</th>
+                            <th scope="col" class="col-1">کدپیگیری</th>
                             <th scope="col" class="col-2">عملیات</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td scope="row">علی </td>
-                            <td>تلاشگر</td>
+                            <td>تلاشگر پور دیلمانی</td>
                             <td>0055945558</td>
                             <td>کارشناسی ارشد</td>
+                            <td>مدیریت</td>
+                            <td>مدیریت دولتی</td>
                             <td>22222</td>
                             <td>
                                 <button data-bs-target="#ProfileModal" data-bs-toggle="modal" class="FuncIcon"><i
                                         class="fa-solid fa-address-card"></i></button>
                                 <button class="FuncIcon"><i class="fa-solid fa-file-powerpoint"
                                         style="color: #ff8800;"></i></button>
-                                <button class="FuncIcon"><i class="fa-solid fa-trash"
-                                        style="color: #ff0000;"></i></button>
+                                <button class="FuncIcon"><i class="fa fa-cloud-download"style="color:blue;"></i></button>
                             </td>
 
                         </tr>

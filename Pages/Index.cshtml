@@ -88,7 +88,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <img class="OtpImg center" src="resource/IMG/Shield.svg" alt="">
-
+                <p style="    text-align-last: center;">لطفا قبل از ورود <a href=#>شرایط پایه</a> را مطالعه فرمائید</p>
                 <p class="form-title">شماره تلفن همراه خود را وارد کنید</p>
                 <div class="row">
                     <div class="input-container PhoneOtpInputs">
@@ -186,15 +186,31 @@
                         <option value="4">در حال خدمت</option>
                     </select>
                 </div>
-                <div class="coolinput">
-                    <label for="select4" class="text">مقطع تحصیلی</label>
+                  <div class="coolinput">
+                    <label for="select4" class="text">رشته تحصیلی</label>
                     <select class="form-select form-select-lg mb-3" autocomplete="off" required
                         aria-label=".form-select-lg example" id="select4">
                         <option value="">انتخاب کنید</option>
-                        <option value="1">کاردانی</option>
-                        <option value="2">کارشناسی</option>
-                        <option value="3">کارشناسی ارشد</option>
-                        <option value="4">دکتری</option>
+                        <option value="1">کامپیوتر</option>
+                        <option value="2">مدیریت</option>
+                    </select>
+                </div>
+                <div class="coolinput">
+                    <label for="select5" class="text">مقطع تحصیلی</label>
+                    <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                        aria-label=".form-select-lg example" id="select5">
+                        <option value="">انتخاب کنید</option>
+                        <option value="1">کارشناسی</option>
+                        <option value="2">کارشناسی ارشد</option>
+                    </select>
+                </div>
+                   <div class="coolinput">
+                    <label for="select6" class="text">گرایش</label>
+                    <select class="form-select form-select-lg mb-3" autocomplete="off" required
+                        aria-label=".form-select-lg example" id="select6">
+                        <option value="">انتخاب کنید</option>
+                        <option value="1">نرم افزار</option>
+                        <option value="2">مدیریت دولتی</option>
                     </select>
                 </div>
                 <div class="coolinput">
@@ -227,6 +243,15 @@
                         <input type='file' id="getFile" style="display:none">
                     </form>
                 </div>
+                 <div class="UploadSec">
+                    <button acc class="UploadBTN" onclick="document.getElementById('getFile').click()">عکس پرسنلی</button>
+                    <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                </div>
+                 <div class="UploadSec">
+                    <button acc class="UploadBTN" onclick="document.getElementById('getFile').click()">گواهی ممتازی</button>
+                    <progress id="progressBar" value="0" max="100" style="width:10rem;"></progress>
+                </div>
+               
                 <div class="UploadSec">
                     <button acc class="UploadBTN" onclick="document.getElementById('getFile').click()">روی کارت
                         ملی</button>

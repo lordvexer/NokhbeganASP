@@ -21,12 +21,21 @@ body {
 .DisplayHide {
   display: none !important;
 }
-.Main{
-  width: 95%!important;
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
 }
 .modal {
   --bs-modal-width: 363px;
   top: 60px;
+}
+.table > thead {
+    vertical-align: bottom;
+    text-align-last: center;
+}
+.table > tbody {
+    text-align-last: center;
 }
 
 .MainCard {
@@ -142,7 +151,7 @@ footer {
   color: #4b4953;
   font-size: 15px;
   border-radius: 5px;
-  width: 10rem;
+  width: 159px;
 
 }
 
@@ -200,6 +209,57 @@ footer {
   -o-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
+
+.UnusedUSerBTN {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #ff8100;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: #ff8100;
+    color: #ffffff;
+    overflow: hidden;
+    width: 10rem;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin-top: 1rem;
+}
+
+    .UnusedUSerBTN:hover {
+        background: #ff8100;
+        color: #ffffff;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+
+        .UnusedUSerBTN:hover::before {
+            -webkit-animation: sh02 0.5s 0s linear;
+            -moz-animation: sh02 0.5s 0s linear;
+            animation: sh02 0.5s 0s linear;
+        }
+
+    .UnusedUSerBTN::before {
+        content: '';
+        display: block;
+        width: 0px;
+        height: 86%;
+        position: absolute;
+        top: 7%;
+        left: 0%;
+        opacity: 0;
+        background: #ff8100;
+        box-shadow: 0 0 50px 30px #fff;
+        -webkit-transform: skewX(-20deg);
+        -moz-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        -o-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+    }
 
 
 .CloseBTN {
@@ -281,14 +341,14 @@ footer {
   padding: 10px 20px;
   border-radius: 7px;
   border: 1px solid #3d4ff0;
-  font-size: 14px;
+  font-size: 10px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
   background: #3a4393;
   color: #ffffff;
   overflow: hidden;
-  width: 10rem;
+  width: 159px;
   box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -513,6 +573,7 @@ font-size: xx-large;
 .LoginBTN {
   color: #fff;
   border-color: #fff;
+  margin-right:auto;
 }
 
 .Expired {
@@ -684,10 +745,9 @@ font-size: xx-large;
 }
 
 .SmsTextArea {
-  padding: 1rem;
-  margin: 1rem;
-  max-inline-size: -webkit-fill-available;
-
+    padding: 1rem;
+    margin: 0rem 1.5rem 0px 1.5rem;
+    max-inline-size: -webkit-fill-available;
 }
 
 .SendSmsBTN {
@@ -707,7 +767,7 @@ font-size: xx-large;
 
 .SmsLabel {
   text-align: start;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .Table1 {
